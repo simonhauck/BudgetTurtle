@@ -8,3 +8,5 @@ variables (This is required for the upcoming gradle commands).
 
 The flutter app uses a generated api client for the server. To get this client locally you have to
 execute ```gradlew app:prepareEnv``` in the root project.
+
+Please Note: In Android studio you still must open the root project
