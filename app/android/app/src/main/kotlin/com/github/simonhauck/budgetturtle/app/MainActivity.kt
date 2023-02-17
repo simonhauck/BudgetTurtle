@@ -1,4 +1,4 @@
-package budgetturtle.app
+package com.github.simonhauck.budgetturtle.app
 
 import io.flutter.embedding.android.FlutterActivity
 

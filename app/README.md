@@ -1,14 +1,16 @@
-# Flutter App
+# app
 
-This is a flutter app to build standalone apps or weg pages with the server
+The Budget Turtle frontend application
 
-## Prerequisites
+## Getting Started
 
-1. Install flutter and make it available on your path according to
-   the [flutter installation description](https://docs.flutter.dev/get-started/install)
+This project is a starting point for a Flutter application.
 
-## Important gradle commands
+A few resources to get you started if this is your first Flutter project:
 
-- ``gradlew prepareEnv``: Before starting development or after pulling use this command. This will pull the current
-  openapi.json and will create the flutter binding.
-- ``gradlew assemble``: This generates a jar that contains the web page as static resources as well as the release.apk
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
