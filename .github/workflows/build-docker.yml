@@ -6,8 +6,6 @@ jobs:
   tests:
     name: Build and push docker image
     runs-on: ubuntu-latest
-    # On GitHub create an environment filled with the data
-    environment: Dockerhub
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
