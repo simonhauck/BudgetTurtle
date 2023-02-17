@@ -1,0 +1,14 @@
+springdoc:
+  default-produces-media-type: application/json
+  api-docs:
+    path: "/v3/api-docs/openapi.json"
+
+# Disable caching for web frontend. This should be refined to allow caching of assets but keep the web frontend up-to-date
+spring:
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          no-store: true
+          no-cache: true
+
