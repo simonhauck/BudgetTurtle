@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.simonhauck.example.app">
+    package="com.github.simonhauck.budgetturtle.app">
    <application
         android:label="app"
         android:name="${applicationName}"

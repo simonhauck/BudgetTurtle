@@ -1,8 +1,8 @@
 plugins {
-    id("com.github.simonhauck.example.artifactory")
-    id("com.github.simonhauck.example.kotlin-conventions")
-    id("com.github.simonhauck.example.spring-conventions")
-    id("com.github.simonhauck.example.docker")
+    id("com.github.simonhauck.budgetturtle.artifactory")
+    id("com.github.simonhauck.budgetturtle.kotlin-conventions")
+    id("com.github.simonhauck.budgetturtle.spring-conventions")
+    id("com.github.simonhauck.budgetturtle.docker")
 
     // Generate open api doc
     id("org.springdoc.openapi-gradle-plugin") version "1.6.0"

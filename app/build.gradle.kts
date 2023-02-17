@@ -2,7 +2,7 @@ import org.gradle.internal.os.OperatingSystem
 import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
 plugins {
-    id("com.github.simonhauck.example.artifactory")
+    id("com.github.simonhauck.budgetturtle.artifactory")
     id("org.openapi.generator") version "6.3.0"
 }
 

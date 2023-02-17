@@ -1,4 +1,4 @@
-rootProject.name = "full-stack-spring-example"
+rootProject.name = "budget-turtle"
 
 pluginManagement {
     repositories {
@@ -7,10 +7,9 @@ pluginManagement {
     }
 }
 
-include("server")
-
-include("server-api")
-
-include("common-test")
-
-include("app")
+include(
+    "server",
+    "server-api",
+    "common-test",
+    "app"
+)

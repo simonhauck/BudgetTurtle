@@ -1,7 +1,7 @@
 plugins {
-    id("com.github.simonhauck.example.artifactory")
-    id("com.github.simonhauck.example.kotlin-conventions")
-    id("com.github.simonhauck.example.spring-conventions")
+    id("com.github.simonhauck.budgetturtle.artifactory")
+    id("com.github.simonhauck.budgetturtle.kotlin-conventions")
+    id("com.github.simonhauck.budgetturtle.spring-conventions")
 }
 
 // Dont generate a bootJar
