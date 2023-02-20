@@ -12,6 +12,12 @@ class SelectedFilesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Expanded(
+      child: files.isEmpty ? _emptyListBody(context) : _listWithFileItems(),
+    );
+  }
+
+  Widget _listWithFileItems() {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -37,6 +43,26 @@ class SelectedFilesList extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+
+  Container _emptyListBody(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "You have to select bank account statements before you can continue",
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+          TextButton(
+            onPressed: () => onSelectFiles(),
+            child: const Text("Select files"),
+          ),
+        ],
+      ),
     );
   }
 

@@ -25,33 +25,10 @@ class _ImportBankStatementsScreenState
   }
 
   Widget _body() {
-    // TODO move this to select files
-    if (selectedFiles.isEmpty) {
-      return Expanded(
-        child: Container(
-          alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "You have to select bank account statements before you can continue",
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-              TextButton(
-                onPressed: () => _selectFiles(),
-                child: const Text("Select files"),
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-    return Expanded(
-        child: SelectedFilesList(
+    return SelectedFilesList(
       files: selectedFiles,
       onSelectFiles: () => _selectFiles(),
-    ));
+    );
   }
 
   Widget _actionButtons() {
