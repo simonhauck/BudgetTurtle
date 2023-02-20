@@ -1,6 +1,9 @@
+import 'package:budget_turtle/util/button/progress_button.dart';
 import 'package:budget_turtle/import_bank_statements/view/selected_files_list.dart';
+import 'package:budget_turtle/util/notification/toast.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ImportBankStatementsScreen extends StatefulWidget {
   const ImportBankStatementsScreen({Key? key}) : super(key: key);
@@ -13,6 +16,16 @@ class ImportBankStatementsScreen extends StatefulWidget {
 class _ImportBankStatementsScreenState
     extends State<ImportBankStatementsScreen> {
   List<PlatformFile> selectedFiles = [];
+
+  bool isLoading = false;
+
+  FToast fToast = FToast();
+
+  @override
+  void initState() {
+    super.initState();
+    fToast.init(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +47,11 @@ class _ImportBankStatementsScreenState
   Widget _actionButtons() {
     return Column(
       children: [
-        ElevatedButton(
-            onPressed: () => _selectFiles(), child: const Text("Select files"))
+        ProgressButton(
+          onPressed: _importFiles,
+          label: "Import files",
+          isLoading: isLoading,
+        ),
       ],
     );
   }
@@ -51,6 +67,19 @@ class _ImportBankStatementsScreenState
 
     setState(() {
       selectedFiles.addAll(result.files);
+    });
+  }
+
+  Future<void> _importFiles() async {
+    setState(() {
+      isLoading = true;
+    });
+    if (selectedFiles.isEmpty) {
+      fToast.showError("You have to select some files");
+    }
+
+    setState(() {
+      isLoading = false;
     });
   }
 }
