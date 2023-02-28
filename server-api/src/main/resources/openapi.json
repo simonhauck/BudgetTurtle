@@ -11,6 +11,36 @@
     }
   ],
   "paths": {
+    "/api/import": {
+      "post": {
+        "tags": [
+          "import-data-controller"
+        ],
+        "operationId": "importBankStatementCsv",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EncodedFileDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImportResultDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/example/asfasf": {
       "get": {
         "tags": [
@@ -34,6 +64,70 @@
   },
   "components": {
     "schemas": {
+      "EncodedFileDto": {
+        "required": [
+          "base64Content",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "base64Content": {
+            "type": "string"
+          }
+        }
+      },
+      "ImportResultDto": {
+        "required": [
+          "detectedTransactions",
+          "errorMsg",
+          "name",
+          "success"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "errorMsg": {
+            "type": "string"
+          },
+          "detectedTransactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionDto"
+            }
+          }
+        }
+      },
+      "TransactionDto": {
+        "required": [
+          "clientName",
+          "date",
+          "transactionAmount",
+          "usageDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "clientName": {
+            "type": "string"
+          },
+          "usageDescription": {
+            "type": "string"
+          },
+          "transactionAmount": {
+            "type": "number"
+          }
+        }
+      },
       "HelloWorldDto": {
         "required": [
           "message"

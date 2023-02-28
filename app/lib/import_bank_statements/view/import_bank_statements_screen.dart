@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:budget_turtle/util/button/progress_button.dart';
 import 'package:budget_turtle/import_bank_statements/view/selected_files_list.dart';
 import 'package:budget_turtle/util/notification/toast.dart';
@@ -77,6 +79,7 @@ class _ImportBankStatementsScreenState
     if (selectedFiles.isEmpty) {
       fToast.showError("You have to select some files");
     }
+    selectedFiles.map((e) => base64Encode(e.bytes?.toList() ?? [])).map((e) => e.toString())
 
     setState(() {
       isLoading = false;

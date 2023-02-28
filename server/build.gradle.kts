@@ -46,6 +46,10 @@ tasks.processResources {
 
 jib { container { ports = listOf("8080") } }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// Open Api Generation
+// ---------------------------------------------------------------------------------------------------------------------
+
 // User another port to have it not clashing with running instances
 openApi {
     val apiGeneratedPort = 59186
@@ -59,4 +63,8 @@ openApi {
             )
         )
     }
+}
+
+tasks.withType<com.github.psxpaul.task.JavaExecFork> {
+    dependsOn(tasks.getByName("inspectClassesForKotlinIC"))
 }
