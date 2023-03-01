@@ -4,7 +4,8 @@
   "errorMsg": "",
   "detectedTransactions": [
     {
-      "id": "63ffba1e7b482b4e266015da",
+      "id": "63ffc5cf8320b459be9814e8",
+      "userId": "someUser",
       "details": {
         "date": "17.02.2023",
         "clientName": "VISA Some Company GMBH",
@@ -14,7 +15,8 @@
       }
     },
     {
-      "id": "63ffba1e7b482b4e266015db",
+      "id": "63ffc5cf8320b459be9814e9",
+      "userId": "someUser",
       "details": {
         "date": "16.02.2023",
         "clientName": "Other Comany",
@@ -24,7 +26,8 @@
       }
     },
     {
-      "id": "63ffba1e7b482b4e266015dc",
+      "id": "63ffc5cf8320b459be9814ea",
+      "userId": "someUser",
       "details": {
         "date": "16.02.2023",
         "clientName": "Some food company",
@@ -34,7 +37,8 @@
       }
     },
     {
-      "id": "63ffba1e7b482b4e266015dd",
+      "id": "63ffc5cf8320b459be9814eb",
+      "userId": "someUser",
       "details": {
         "date": "15.02.2023",
         "clientName": "Grandma",
@@ -44,7 +48,8 @@
       }
     },
     {
-      "id": "63ffba1e7b482b4e266015de",
+      "id": "63ffc5cf8320b459be9814ec",
+      "userId": "someUser",
       "details": {
         "date": "02.02.2023",
         "clientName": "ING",
@@ -54,7 +59,8 @@
       }
     },
     {
-      "id": "63ffba1e7b482b4e266015df",
+      "id": "63ffc5cf8320b459be9814ed",
+      "userId": "someUser",
       "details": {
         "date": "01.02.2023",
         "clientName": "Roommate",
@@ -64,7 +70,8 @@
       }
     },
     {
-      "id": "63ffba1e7b482b4e266015e0",
+      "id": "63ffc5cf8320b459be9814ee",
+      "userId": "someUser",
       "details": {
         "date": "01.02.2023",
         "clientName": "Some random Person",
@@ -74,7 +81,8 @@
       }
     },
     {
-      "id": "63ffba1e7b482b4e266015e1",
+      "id": "63ffc5cf8320b459be9814ef",
+      "userId": "someUser",
       "details": {
         "date": "31.01.2023",
         "clientName": "The uncreative company",
@@ -84,7 +92,8 @@
       }
     },
     {
-      "id": "63ffba1e7b482b4e266015e2",
+      "id": "63ffc5cf8320b459be9814f0",
+      "userId": "someUser",
       "details": {
         "date": "26.01.2023",
         "clientName": "Saving Company",
@@ -94,7 +103,8 @@
       }
     },
     {
-      "id": "63ffba1e7b482b4e266015e3",
+      "id": "63ffc5cf8320b459be9814f1",
+      "userId": "someUser",
       "details": {
         "date": "24.01.2023",
         "clientName": "Best company",

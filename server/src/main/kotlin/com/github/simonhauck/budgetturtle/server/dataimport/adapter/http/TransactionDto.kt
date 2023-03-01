@@ -3,11 +3,15 @@ package com.github.simonhauck.budgetturtle.server.dataimport.adapter.http
 import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.Transaction
 import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.TransactionDetails
 
-data class TransactionDto(val id: String, val details: TransactionDetailsDto) {
+data class TransactionDto(val id: String, val userId: String, val details: TransactionDetailsDto) {
     companion object {
 
         fun fromModel(model: Transaction): TransactionDto =
-            TransactionDto(model.id.toString(), TransactionDetailsDto.fromModel(model.details))
+            TransactionDto(
+                id = model.id.toString(),
+                userId = model.userId,
+                details = TransactionDetailsDto.fromModel(model.details)
+            )
     }
 }
 

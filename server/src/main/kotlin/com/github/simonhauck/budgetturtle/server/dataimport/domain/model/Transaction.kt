@@ -6,6 +6,7 @@ import org.litote.kmongo.Id
 import org.litote.kmongo.newId
 
 data class Transaction(
+    val userId: String,
     val details: TransactionDetails,
     @BsonId val id: Id<Transaction> = newId(),
 )

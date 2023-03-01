@@ -12,7 +12,7 @@ class ImportDataControllerIT : IntegrationTest() {
         testDriver(this) {
             val fileContent = Base64Util.encode(readAsByteArray("ing_export.csv"))
 
-            val actual = post("/api/import", EncodedFileDto("someFile.csv", fileContent))
+            val actual = post("/api/import/someUser", EncodedFileDto("someFile.csv", fileContent))
 
             actual.body.assertJsonEquals(
                 readAndNormalize("importResult_expected.json"),

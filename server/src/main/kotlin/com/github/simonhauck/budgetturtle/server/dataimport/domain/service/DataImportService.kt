@@ -12,7 +12,7 @@ class DataImportService(
     private val transactionRepository: TransactionRepository,
 ) {
 
-    fun importCsv(content: String): Either<String, List<Transaction>> {
+    fun importCsv(userId: String, content: String): Either<String, List<Transaction>> {
         val content = stripContentOfPrefixAndSuffix(content).joinToString(System.lineSeparator())
 
         val lines =
@@ -23,7 +23,9 @@ class DataImportService(
                 .readAllWithHeader(content)
 
         val transactions =
-            lines.map { it.extractTransactionDetails() }.map { Transaction(details = it) }
+            lines
+                .map { it.extractTransactionDetails() }
+                .map { Transaction(userId = userId, details = it) }
 
         return transactionRepository.insertMany(transactions)
     }
