@@ -1,3 +1,5 @@
+import org.springdoc.openapi.gradle.plugin.OpenApiGeneratorTask
+
 plugins {
     id("com.github.simonhauck.budgetturtle.artifactory")
     id("com.github.simonhauck.budgetturtle.kotlin-conventions")
@@ -23,6 +25,9 @@ dependencies {
 
     // Logging
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
+
+    // Csv parsing
+    implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.8.0")
 
     // Test dependencies
     testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -64,6 +69,8 @@ openApi {
         )
     }
 }
+
+tasks.withType<OpenApiGeneratorTask>() { outputs.upToDateWhen { false } }
 
 tasks.withType<com.github.psxpaul.task.JavaExecFork> {
     dependsOn(tasks.getByName("inspectClassesForKotlinIC"))

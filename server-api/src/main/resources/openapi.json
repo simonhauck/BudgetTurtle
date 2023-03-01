@@ -100,17 +100,18 @@
           "detectedTransactions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/TransactionDto"
+              "$ref": "#/components/schemas/TransactionDetailsDto"
             }
           }
         }
       },
-      "TransactionDto": {
+      "TransactionDetailsDto": {
         "required": [
+          "bookingType",
           "clientName",
           "date",
-          "transactionAmount",
-          "usageDescription"
+          "purpose",
+          "transactionAmount"
         ],
         "type": "object",
         "properties": {
@@ -120,11 +121,15 @@
           "clientName": {
             "type": "string"
           },
-          "usageDescription": {
+          "bookingType": {
+            "type": "string"
+          },
+          "purpose": {
             "type": "string"
           },
           "transactionAmount": {
-            "type": "number"
+            "type": "number",
+            "format": "double"
           }
         }
       },
