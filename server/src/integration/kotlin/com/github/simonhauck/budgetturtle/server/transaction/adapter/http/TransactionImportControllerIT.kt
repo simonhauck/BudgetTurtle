@@ -1,11 +1,10 @@
-package com.github.simonhauck.budgetturtle.server.dataimport.adapter.http
+package com.github.simonhauck.budgetturtle.server.transaction.adapter.http
 
 import com.github.simonhauck.budgetturtle.server.IntegrationTest
 import com.github.simonhauck.budgetturtle.server.testutil.driver.Base64Util
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
-class ImportDataControllerIT : IntegrationTest() {
+class TransactionImportControllerIT : IntegrationTest() {
 
     @Test
     fun `imported data should be available afterwards via the get endpoint`() =

@@ -1,4 +1,4 @@
-package com.github.simonhauck.budgetturtle.server.dataimport.domain.model
+package com.github.simonhauck.budgetturtle.server.transaction.domain.model
 
 import java.math.BigDecimal
 import org.bson.codecs.pojo.annotations.BsonId

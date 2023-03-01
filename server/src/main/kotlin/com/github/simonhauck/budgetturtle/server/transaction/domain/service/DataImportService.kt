@@ -1,10 +1,10 @@
-package com.github.simonhauck.budgetturtle.server.dataimport.domain.service
+package com.github.simonhauck.budgetturtle.server.transaction.domain.service
 
 import arrow.core.Either
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
-import com.github.simonhauck.budgetturtle.server.dataimport.adapter.db.TransactionRepository
-import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.Transaction
-import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.TransactionDetails
+import com.github.simonhauck.budgetturtle.server.transaction.adapter.db.TransactionRepository
+import com.github.simonhauck.budgetturtle.server.transaction.domain.model.Transaction
+import com.github.simonhauck.budgetturtle.server.transaction.domain.model.TransactionDetails
 import org.springframework.stereotype.Service
 
 @Service

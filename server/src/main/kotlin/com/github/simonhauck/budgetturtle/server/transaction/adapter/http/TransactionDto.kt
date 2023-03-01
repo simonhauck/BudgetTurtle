@@ -1,7 +1,7 @@
-package com.github.simonhauck.budgetturtle.server.dataimport.adapter.http
+package com.github.simonhauck.budgetturtle.server.transaction.adapter.http
 
-import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.Transaction
-import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.TransactionDetails
+import com.github.simonhauck.budgetturtle.server.transaction.domain.model.Transaction
+import com.github.simonhauck.budgetturtle.server.transaction.domain.model.TransactionDetails
 
 data class TransactionDto(val id: String, val userId: String, val details: TransactionDetailsDto) {
     companion object {

@@ -1,7 +1,7 @@
-package com.github.simonhauck.budgetturtle.server.dataimport.adapter.db
+package com.github.simonhauck.budgetturtle.server.transaction.adapter.db
 
 import arrow.core.Either
-import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.Transaction
+import com.github.simonhauck.budgetturtle.server.transaction.domain.model.Transaction
 import com.mongodb.client.MongoDatabase
 import org.litote.kmongo.getCollection
 import org.springframework.stereotype.Component

@@ -1,14 +1,14 @@
-package com.github.simonhauck.budgetturtle.server.dataimport.adapter.http
+package com.github.simonhauck.budgetturtle.server.transaction.adapter.http
 
 import arrow.core.getOrHandle
-import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.Transaction
-import com.github.simonhauck.budgetturtle.server.dataimport.domain.service.DataImportService
+import com.github.simonhauck.budgetturtle.server.transaction.domain.model.Transaction
+import com.github.simonhauck.budgetturtle.server.transaction.domain.service.DataImportService
 import java.util.Base64
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/api/import")
-class ImportDataController(
+@RequestMapping("/api/transaction/import")
+class TransactionImportController(
     private val dataImportService: DataImportService,
 ) {
 
