@@ -15,19 +15,17 @@ class DataImportService(
     fun importCsv(content: String): Either<String, List<Transaction>> {
         val content = stripContentOfPrefixAndSuffix(content).joinToString(System.lineSeparator())
 
-        val readAllWithHeader =
+        val lines =
             csvReader {
                     delimiter = ING_GER_DELIMITER
                     autoRenameDuplicateHeaders = true
                 }
                 .readAllWithHeader(content)
 
-        val map =
-            readAllWithHeader
-                .map { it.extractTransactionDetails() }
-                .map { Transaction(details = it) }
+        val transactions =
+            lines.map { it.extractTransactionDetails() }.map { Transaction(details = it) }
 
-        return transactionRepository.insertMany(map)
+        return transactionRepository.insertMany(transactions)
     }
 
     private fun stripContentOfPrefixAndSuffix(content: String): List<String> {
