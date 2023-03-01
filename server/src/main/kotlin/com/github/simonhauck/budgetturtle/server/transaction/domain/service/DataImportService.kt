@@ -1,17 +1,19 @@
 package com.github.simonhauck.budgetturtle.server.transaction.domain.service
 
 import arrow.core.Either
+import arrow.core.flatMap
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
 import com.github.simonhauck.budgetturtle.server.transaction.adapter.db.TransactionRepository
 import com.github.simonhauck.budgetturtle.server.transaction.domain.model.Transaction
 import com.github.simonhauck.budgetturtle.server.transaction.domain.model.TransactionDetails
+import mu.KotlinLogging
 import org.springframework.stereotype.Service
 
 @Service
 class DataImportService(
     private val transactionRepository: TransactionRepository,
 ) {
-
+    private val log = KotlinLogging.logger {}
     fun importCsv(userId: String, content: String): Either<String, List<Transaction>> {
         val content = stripContentOfPrefixAndSuffix(content).joinToString(System.lineSeparator())
 
@@ -27,7 +29,12 @@ class DataImportService(
                 .map { it.extractTransactionDetails() }
                 .map { Transaction(userId = userId, details = it) }
 
-        return transactionRepository.insertMany(transactions)
+        return Either.conditionally(
+                transactions.isNotEmpty(),
+                { "No parsed statements found for file".also { log.warn { it } } },
+                { transactions }
+            )
+            .flatMap { transactionRepository.insertMany(transactions) }
     }
 
     private fun stripContentOfPrefixAndSuffix(content: String): List<String> {

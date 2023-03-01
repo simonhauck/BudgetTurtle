@@ -1,11 +1,15 @@
 import 'dart:convert';
+import 'dart:math';
 
+import 'package:budget_turtle/user/user.dart';
 import 'package:budget_turtle/util/button/progress_button.dart';
 import 'package:budget_turtle/import_bank_statements/view/selected_files_list.dart';
 import 'package:budget_turtle/util/notification/toast.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:provider/provider.dart';
+import 'package:server/server.dart';
 
 class ImportBankStatementsScreen extends StatefulWidget {
   const ImportBankStatementsScreen({Key? key}) : super(key: key);
@@ -19,6 +23,8 @@ class _ImportBankStatementsScreenState
     extends State<ImportBankStatementsScreen> {
   List<PlatformFile> selectedFiles = [];
 
+  final _importApi = Server(basePathOverride: "http://10.0.2.2:8080")
+      .getTransactionImportControllerApi();
   bool isLoading = false;
 
   FToast fToast = FToast();
@@ -63,7 +69,8 @@ class _ImportBankStatementsScreenState
         dialogTitle: "Select bank statements",
         allowedExtensions: ["csv"],
         type: FileType.custom,
-        allowMultiple: true);
+        allowMultiple: true,
+        withData: true);
 
     if (result == null) return;
 
@@ -76,13 +83,41 @@ class _ImportBankStatementsScreenState
     setState(() {
       isLoading = true;
     });
+
     if (selectedFiles.isEmpty) {
       fToast.showError("You have to select some files");
     }
-    selectedFiles.map((e) => base64Encode(e.bytes?.toList() ?? [])).map((e) => e.toString())
+
+    var user = context.read<User>();
+
+    for (var nativeFile in selectedFiles) {
+      var content = base64Encode(nativeFile.bytes?.toList() ?? []);
+
+      await _handleFileUpload(nativeFile.name, content, user);
+    }
 
     setState(() {
       isLoading = false;
     });
+  }
+
+  Future<void> _handleFileUpload(String name, String content, User user) async {
+    var dto = EncodedFileDtoBuilder()
+      ..name = name
+      ..base64Content = content;
+
+    try {
+      var importBankStatementCsv = await _importApi.importBankStatementCsv(
+          userId: user.identifier, encodedFileDto: dto.build());
+
+      if (importBankStatementCsv.data?.success ?? false) {
+        fToast.showSuccess("Successfully imported file $name");
+      } else {
+        var message = "Error ${importBankStatementCsv.data?.errorMsg}";
+        fToast.showError(message);
+      }
+    } catch (e) {
+      fToast.showError("Upload failed with an unexpected error");
+    }
   }
 }

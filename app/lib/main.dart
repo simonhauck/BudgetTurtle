@@ -1,9 +1,18 @@
 import 'package:budget_turtle/router.dart';
 import 'package:budget_turtle/upload_account_export_button.dart';
+import 'package:budget_turtle/user/user.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      Provider(
+        create: (_) => User("someUser"),
+      )
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
