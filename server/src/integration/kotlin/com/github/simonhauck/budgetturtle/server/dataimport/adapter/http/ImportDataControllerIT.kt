@@ -2,7 +2,6 @@ package com.github.simonhauck.budgetturtle.server.dataimport.adapter.http
 
 import com.github.simonhauck.budgetturtle.server.IntegrationTest
 import com.github.simonhauck.budgetturtle.server.testutil.driver.Base64Util
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
@@ -15,6 +14,9 @@ class ImportDataControllerIT : IntegrationTest() {
 
             val actual = post("/api/import", EncodedFileDto("someFile.csv", fileContent))
 
-            assertThat(actual.body).isEqualTo(readAndNormalize("importResult_expected.json"))
+            actual.body.assertJsonEquals(
+                readAndNormalize("importResult_expected.json"),
+                "detectedTransactions[*].id"
+            )
         }
 }

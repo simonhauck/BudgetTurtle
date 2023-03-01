@@ -4,74 +4,104 @@
   "errorMsg": "",
   "detectedTransactions": [
     {
-      "date": "17.02.2023",
-      "clientName": "VISA Some Company GMBH",
-      "bookingType": "Lastschrift",
-      "purpose": "Payed for the best food",
-      "transactionAmount": -50.0
+      "id": "63ffba1e7b482b4e266015da",
+      "details": {
+        "date": "17.02.2023",
+        "clientName": "VISA Some Company GMBH",
+        "bookingType": "Lastschrift",
+        "purpose": "Payed for the best food",
+        "transactionAmount": -50.0
+      }
     },
     {
-      "date": "16.02.2023",
-      "clientName": "Other Comany",
-      "bookingType": "Überweisung",
-      "purpose": "Some custom usage",
-      "transactionAmount": -1.0
+      "id": "63ffba1e7b482b4e266015db",
+      "details": {
+        "date": "16.02.2023",
+        "clientName": "Other Comany",
+        "bookingType": "Überweisung",
+        "purpose": "Some custom usage",
+        "transactionAmount": -1.0
+      }
     },
     {
-      "date": "16.02.2023",
-      "clientName": "Some food company",
-      "bookingType": "Lastschrift",
-      "purpose": "Google Pay",
-      "transactionAmount": -10.87
+      "id": "63ffba1e7b482b4e266015dc",
+      "details": {
+        "date": "16.02.2023",
+        "clientName": "Some food company",
+        "bookingType": "Lastschrift",
+        "purpose": "Google Pay",
+        "transactionAmount": -10.87
+      }
     },
     {
-      "date": "15.02.2023",
-      "clientName": "Grandma",
-      "bookingType": "Gutschrift",
-      "purpose": "Support grandchildren",
-      "transactionAmount": 28.91
+      "id": "63ffba1e7b482b4e266015dd",
+      "details": {
+        "date": "15.02.2023",
+        "clientName": "Grandma",
+        "bookingType": "Gutschrift",
+        "purpose": "Support grandchildren",
+        "transactionAmount": 28.91
+      }
     },
     {
-      "date": "02.02.2023",
-      "clientName": "ING",
-      "bookingType": "Entgelt",
-      "purpose": "Money for giroCard",
-      "transactionAmount": -0.99
+      "id": "63ffba1e7b482b4e266015de",
+      "details": {
+        "date": "02.02.2023",
+        "clientName": "ING",
+        "bookingType": "Entgelt",
+        "purpose": "Money for giroCard",
+        "transactionAmount": -0.99
+      }
     },
     {
-      "date": "01.02.2023",
-      "clientName": "Roommate",
-      "bookingType": "Gutschrift aus Dauerauftrag",
-      "purpose": "Anteil Miete",
-      "transactionAmount": 100.0
+      "id": "63ffba1e7b482b4e266015df",
+      "details": {
+        "date": "01.02.2023",
+        "clientName": "Roommate",
+        "bookingType": "Gutschrift aus Dauerauftrag",
+        "purpose": "Anteil Miete",
+        "transactionAmount": 100.0
+      }
     },
     {
-      "date": "01.02.2023",
-      "clientName": "Some random Person",
-      "bookingType": "Dauerauftrag / Terminueberweisung",
-      "purpose": "Rent",
-      "transactionAmount": -1000.0
+      "id": "63ffba1e7b482b4e266015e0",
+      "details": {
+        "date": "01.02.2023",
+        "clientName": "Some random Person",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Rent",
+        "transactionAmount": -1000.0
+      }
     },
     {
-      "date": "31.01.2023",
-      "clientName": "The uncreative company",
-      "bookingType": "Lastschrift",
-      "purpose": "Some text",
-      "transactionAmount": -5.55
+      "id": "63ffba1e7b482b4e266015e1",
+      "details": {
+        "date": "31.01.2023",
+        "clientName": "The uncreative company",
+        "bookingType": "Lastschrift",
+        "purpose": "Some text",
+        "transactionAmount": -5.55
+      }
     },
     {
-      "date": "26.01.2023",
-      "clientName": "Saving Company",
-      "bookingType": "Dauerauftrag / Terminueberweisung",
-      "purpose": "Shut up and take my money",
-      "transactionAmount": -100.0
+      "id": "63ffba1e7b482b4e266015e2",
+      "details": {
+        "date": "26.01.2023",
+        "clientName": "Saving Company",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Shut up and take my money",
+        "transactionAmount": -100.0
+      }
     },
     {
-      "date": "24.01.2023",
-      "clientName": "Best company",
-      "bookingType": "Gehalt/Rente",
-      "purpose": "Lohn",
-      "transactionAmount": 4001.93
+      "id": "63ffba1e7b482b4e266015e3",
+      "details": {
+        "date": "24.01.2023",
+        "clientName": "Best company",
+        "bookingType": "Gehalt/Rente",
+        "purpose": "Lohn",
+        "transactionAmount": 4001.93
+      }
     }
   ]
 }

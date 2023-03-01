@@ -1,15 +1,18 @@
 package com.github.simonhauck.budgetturtle.server.dataimport.domain.service
 
-import com.fasterxml.jackson.datatype.jsr310.DecimalUtils.toBigDecimal
+import arrow.core.Either
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
-import java.math.BigDecimal
-import java.util.*
+import com.github.simonhauck.budgetturtle.server.dataimport.adapter.db.TransactionRepository
+import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.Transaction
+import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.TransactionDetails
 import org.springframework.stereotype.Service
 
 @Service
-class DataImportService {
+class DataImportService(
+    private val transactionRepository: TransactionRepository,
+) {
 
-    fun importCsv(content: String): List<TransactionDetails> {
+    fun importCsv(content: String): Either<String, List<Transaction>> {
         val content = stripContentOfPrefixAndSuffix(content).joinToString(System.lineSeparator())
 
         val readAllWithHeader =
@@ -19,7 +22,12 @@ class DataImportService {
                 }
                 .readAllWithHeader(content)
 
-        return readAllWithHeader.map { it.extractTransactionDetails() }
+        val map =
+            readAllWithHeader
+                .map { it.extractTransactionDetails() }
+                .map { Transaction(details = it) }
+
+        return transactionRepository.insertMany(map)
     }
 
     private fun stripContentOfPrefixAndSuffix(content: String): List<String> {
@@ -58,11 +66,3 @@ class DataImportService {
         const val ING_GER_TRANSACTION_AMOUNT_KEY = "Betrag"
     }
 }
-
-data class TransactionDetails(
-    val date: String,
-    val clientName: String,
-    val bookingType: String,
-    val purpose: String,
-    val transactionAmount: BigDecimal
-)

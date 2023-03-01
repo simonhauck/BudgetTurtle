@@ -18,7 +18,15 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
+    // Spring
     implementation("org.springframework.boot:spring-boot-starter-web")
+    //    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+
+    // KMongo for database
+    implementation("org.litote.kmongo:kmongo:4.8.0")
+
+    // Handle errors
+    implementation("io.arrow-kt:arrow-core:1.1.2")
 
     // OpenApi Swagger
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2")

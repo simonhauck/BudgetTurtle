@@ -1,7 +1,8 @@
 package com.github.simonhauck.budgetturtle.server.dataimport.adapter.http
 
+import arrow.core.getOrHandle
+import com.github.simonhauck.budgetturtle.server.dataimport.domain.model.Transaction
 import com.github.simonhauck.budgetturtle.server.dataimport.domain.service.DataImportService
-import com.github.simonhauck.budgetturtle.server.dataimport.domain.service.TransactionDetails
 import java.util.Base64
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -19,13 +20,29 @@ class ImportDataController(
         val transactionDetails =
             dataImportService.importCsv(decodeBase64(encodedFileDto.base64Content))
 
-        return ImportResultDto(
-            encodedFileDto.name,
-            true,
-            "",
-            transactionDetails.map { TransactionDetailsDto.fromModel(it) }
-        )
+        return transactionDetails
+            .map { transactions -> getSuccessResult(encodedFileDto, transactions) }
+            .getOrHandle { getImportFailedResult(encodedFileDto, it) }
     }
+
+    private fun getImportFailedResult(encodedFileDto: EncodedFileDto, it: String): ImportResultDto =
+        ImportResultDto(
+            name = encodedFileDto.name,
+            success = false,
+            errorMsg = it,
+            detectedTransactions = emptyList()
+        )
+
+    private fun getSuccessResult(
+        encodedFileDto: EncodedFileDto,
+        transactions: List<Transaction>
+    ): ImportResultDto =
+        ImportResultDto(
+            name = encodedFileDto.name,
+            success = true,
+            errorMsg = "",
+            detectedTransactions = transactions.map { TransactionDto.fromModel(it) }
+        )
 
     companion object {
 
@@ -38,29 +55,8 @@ data class ImportResultDto(
     val name: String,
     val success: Boolean,
     val errorMsg: String,
-    val detectedTransactions: List<TransactionDetailsDto>
+    val detectedTransactions: List<TransactionDto>
 )
-
-data class TransactionDetailsDto(
-    val date: String,
-    val clientName: String,
-    val bookingType: String,
-    val purpose: String,
-    val transactionAmount: Double
-) {
-    companion object {
-
-        fun fromModel(model: TransactionDetails): TransactionDetailsDto {
-            return TransactionDetailsDto(
-                date = model.date,
-                clientName = model.clientName,
-                bookingType = model.bookingType,
-                purpose = model.purpose,
-                transactionAmount = model.transactionAmount.toDouble()
-            )
-        }
-    }
-}
 
 data class EncodedFileDto(
     val name: String,
