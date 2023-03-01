@@ -7,11 +7,15 @@ import org.junit.jupiter.api.Test
 class TransactionImportControllerIT : IntegrationTest() {
 
     @Test
-    fun `imported data should be available afterwards via the get endpoint`() =
+    fun `the encoded csv file should be correctly parsed and saved in the database`() =
         testDriver(this) {
             val fileContent = Base64Util.encode(readAsByteArray("ing_export.csv"))
 
-            val actual = post("/api/import/someUser", EncodedFileDto("someFile.csv", fileContent))
+            val actual =
+                post(
+                    "/api/transaction/import/someUser",
+                    EncodedFileDto("someFile.csv", fileContent)
+                )
 
             actual.body.assertJsonEquals(
                 readAndNormalize("importResult_expected.json"),

@@ -11,12 +11,22 @@
     }
   ],
   "paths": {
-    "/api/import": {
+    "/api/transaction/import/{userId}": {
       "post": {
         "tags": [
-          "import-data-controller"
+          "transaction-import-controller"
         ],
         "operationId": "importBankStatementCsv",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -100,7 +110,7 @@
           "detectedTransactions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/TransactionDetailsDto"
+              "$ref": "#/components/schemas/TransactionDto"
             }
           }
         }
@@ -130,6 +140,25 @@
           "transactionAmount": {
             "type": "number",
             "format": "double"
+          }
+        }
+      },
+      "TransactionDto": {
+        "required": [
+          "details",
+          "id",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "details": {
+            "$ref": "#/components/schemas/TransactionDetailsDto"
           }
         }
       },
