@@ -3,7 +3,7 @@ package com.github.simonhauck.budgetturtle.server.transaction.adapter.db
 import arrow.core.Either
 import com.github.simonhauck.budgetturtle.server.transaction.domain.model.Transaction
 import com.mongodb.client.MongoDatabase
-import org.litote.kmongo.getCollection
+import org.litote.kmongo.*
 import org.springframework.stereotype.Component
 
 @Component
@@ -19,5 +19,19 @@ class TransactionRepository(
             { "Some or all documents could not be imported" },
             { transactions }
         )
+    }
+
+    fun getLatestTransactionForUser(
+        userId: String,
+        requestedAmount: Int,
+        lastSeenId: String?
+    ): List<Transaction> {
+        val lastSeenId = lastSeenId?.toId<Transaction>() ?: newId()
+        return database
+            .getCollection<Transaction>()
+            .find(Transaction::userId eq userId, Transaction::id lt lastSeenId)
+            .sort(descending(Transaction::id))
+            .limit(requestedAmount)
+            .toList()
     }
 }

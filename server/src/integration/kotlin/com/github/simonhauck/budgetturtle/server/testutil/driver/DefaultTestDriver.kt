@@ -11,10 +11,12 @@ class DefaultTestDriver(
     private val restTemplateUtil: RestTemplateUtil,
     private val resourceUtil: ResourceUtil,
     private val assertionUtil: AssertionUtil,
+    private val transactionUtil: TransactionUtil
 ) :
     RestTemplateUtil by restTemplateUtil,
     ResourceUtil by resourceUtil,
-    AssertionUtil by assertionUtil {
+    AssertionUtil by assertionUtil,
+    TransactionUtil by transactionUtil {
 
     operator fun invoke(testClazz: Any, action: DefaultTestDriver.() -> Unit) {
         testDriverSetup(testClazz)
