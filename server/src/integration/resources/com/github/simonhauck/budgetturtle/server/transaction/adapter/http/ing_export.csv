@@ -1,0 +1,24 @@
+Umsatzanzeige;Datei erstellt am: 19.02.2023 23:27
+
+IBAN;DE01 2345 6789 1011 1213 14
+Kontoname;Girokonto
+Bank;ING
+Kunde;Max Mustermann
+Zeitraum;19.01.2023 - 19.02.2023
+Saldo;42.000,69;EUR
+
+Sortierung;Datum absteigend
+
+In der CSV-Datei finden Sie alle bereits gebuchten Umsätze. Die vorgemerkten Umsätze werden nicht aufgenommen, auch wenn sie in Ihrem Internetbanking angezeigt werden.
+
+Buchung;Valuta;Auftraggeber/Empfänger;Buchungstext;Verwendungszweck;Saldo;Währung;Betrag;Währung
+17.02.2023;17.02.2023;VISA Some Company GMBH;Lastschrift;Payed for the best food;5.050,50;EUR;-50,00;EUR
+16.02.2023;16.02.2023;Other Comany;Überweisung;Some custom usage;4.949,00;EUR;-1,00;EUR
+16.02.2023;16.02.2023;Some food company;Lastschrift;Google Pay;4.900,01;EUR;-10,87;EUR
+15.02.2023;15.02.2023;Grandma;Gutschrift;Support grandchildren;5000,00;EUR;28,91;EUR
+02.02.2023;02.02.2023;ING;Entgelt;Money for giroCard;4.999,66;EUR;-0,99;EUR
+01.02.2023;01.02.2023;Roommate;Gutschrift aus Dauerauftrag;Anteil Miete;5.100,66;EUR;100,00;EUR
+01.02.2023;01.02.2023;Some random Person;Dauerauftrag / Terminueberweisung;Rent;4.000,66;EUR;-1.000,00;EUR
+31.01.2023;31.01.2023;The uncreative company;Lastschrift;Some text;3.995,15;EUR;-5,55;EUR
+26.01.2023;26.01.2023;Saving Company;Dauerauftrag / Terminueberweisung;Shut up and take my money;3.895,15;EUR;-100,00;EUR
+24.01.2023;24.01.2023;Best company;Gehalt/Rente;Lohn;4.895,15;EUR;4.001,93;EUR

@@ -14,6 +14,10 @@ dependencies:
   server:
     path: build/api-binding/client
   cupertino_icons: ^1.0.2
+  provider: ^6.0.5
+  go_router: ^6.0.9
+  file_picker: ^5.2.5
+  fluttertoast: ^8.2.1
 
 dev_dependencies:
   flutter_test:

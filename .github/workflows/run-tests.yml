@@ -32,6 +32,14 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Setup MongoDB
+        uses: supercharge/mongodb-github-action@1.8.0
+        with:
+          mongodb-version: 6.0
+          mongodb-username: root
+          mongodb-password: example
+          mongodb-db: budget-turtle
+
       - name: Assemble ${{matrix.module}}
         run: ./gradlew ${{matrix.module}}:assemble
 
