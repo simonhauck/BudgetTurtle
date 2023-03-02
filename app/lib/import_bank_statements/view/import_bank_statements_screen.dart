@@ -1,9 +1,8 @@
 import 'dart:convert';
-import 'dart:math';
 
+import 'package:budget_turtle/import_bank_statements/view/selected_files_list.dart';
 import 'package:budget_turtle/user/user.dart';
 import 'package:budget_turtle/util/button/progress_button.dart';
-import 'package:budget_turtle/import_bank_statements/view/selected_files_list.dart';
 import 'package:budget_turtle/util/notification/toast.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
