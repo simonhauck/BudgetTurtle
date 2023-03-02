@@ -9,8 +9,6 @@ class TransactionControllerIT : IntegrationTest() {
     @Test
     fun `get all returns an empty list of transactions for a new user`() =
         testDriver(this) {
-            //            createTransactionForUser(user)
-
             val actual = get("/api/transactions/user/$user/last/null")
 
             actual.body.assertJsonEquals(readAndNormalize("getTransaction_new_user_expected.json"))

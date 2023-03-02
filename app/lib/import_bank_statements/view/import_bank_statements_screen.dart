@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:budget_turtle/config.dart';
 import 'package:budget_turtle/import_bank_statements/view/selected_files_list.dart';
 import 'package:budget_turtle/user/user.dart';
 import 'package:budget_turtle/util/button/progress_button.dart';
@@ -22,7 +23,7 @@ class _ImportBankStatementsScreenState
     extends State<ImportBankStatementsScreen> {
   List<PlatformFile> selectedFiles = [];
 
-  final _importApi = Server(basePathOverride: "http://10.0.2.2:8080")
+  final _importApi = Server(basePathOverride: getBasePath())
       .getTransactionImportControllerApi();
   bool isLoading = false;
 
