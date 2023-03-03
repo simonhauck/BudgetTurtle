@@ -26,7 +26,7 @@ dependencies {
     implementation("org.litote.kmongo:kmongo:4.8.0")
 
     // Handle errors
-    implementation("io.arrow-kt:arrow-core:1.1.2")
+    implementation("io.arrow-kt:arrow-core:1.1.5")
 
     // OpenApi Swagger
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2")
