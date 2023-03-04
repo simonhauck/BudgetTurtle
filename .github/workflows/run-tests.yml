@@ -33,7 +33,7 @@ jobs:
           cache: true
 
       - name: Setup MongoDB
-        uses: supercharge/mongodb-github-action@1.8.0
+        uses: supercharge/mongodb-github-action@v1.9.0
         with:
           mongodb-version: 6.0
           mongodb-username: root
