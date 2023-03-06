@@ -37,6 +37,9 @@ dependencies {
     // Csv parsing
     implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.8.0")
 
+    // Detect encoding
+    implementation("com.github.albfernandez:juniversalchardet:2.4.0")
+
     // Test dependencies
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation(project(":common-test"))

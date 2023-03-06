@@ -64,7 +64,7 @@ class _InfiniteTransactionListState extends State<InfiniteTransactionList> {
   Widget _buildTransactionDtoItem(
       BuildContext context, TransactionDto item, int index) {
     return ListTile(
-      title: Text("Title not yet working"),
+      title: Text(item.details.clientName),
       subtitle: Text(item.details.purpose),
     );
   }
