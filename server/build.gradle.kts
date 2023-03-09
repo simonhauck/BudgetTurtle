@@ -29,7 +29,7 @@ dependencies {
     implementation("io.arrow-kt:arrow-core:1.1.5")
 
     // OpenApi Swagger
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.3")
 
     // Logging
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
