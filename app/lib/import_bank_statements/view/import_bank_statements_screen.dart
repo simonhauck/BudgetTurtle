@@ -85,7 +85,7 @@ class _ImportBankStatementsScreenState
     });
 
     if (selectedFiles.isEmpty) {
-      fToast.showError("You have to select some files");
+      fToast.showError("No files selected");
     }
 
     var user = context.read<User>();
@@ -111,13 +111,13 @@ class _ImportBankStatementsScreenState
           userId: user.identifier, encodedFileDto: dto.build());
 
       if (importBankStatementCsv.data?.success ?? false) {
-        fToast.showSuccess("Successfully imported file $name");
+        fToast.showSuccess("File imported");
       } else {
         var message = "Error ${importBankStatementCsv.data?.errorMsg}";
         fToast.showError(message);
       }
     } catch (e) {
-      fToast.showError("Upload failed with an unexpected error");
+      fToast.showError("Unexpected error");
     }
   }
 }

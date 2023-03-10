@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class UploadAccountExportButton extends StatelessWidget {
-  const UploadAccountExportButton({Key? key}) : super(key: key);
+  final VoidCallback? onNavigationChanged;
+
+  const UploadAccountExportButton({Key? key, required this.onNavigationChanged})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,5 +19,10 @@ class UploadAccountExportButton extends StatelessWidget {
 
   void _onPressed(BuildContext context) {
     context.push(importScreen);
+    var callback = onNavigationChanged;
+    if (callback == null) {
+      return;
+    }
+    callback();
   }
 }

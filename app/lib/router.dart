@@ -1,5 +1,7 @@
 import 'package:budget_turtle/import_bank_statements/view/import_bank_statements_screen.dart';
 import 'package:budget_turtle/transactions/transaction_screen.dart';
+import 'package:budget_turtle/util/config/shared_config_provider.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 const transactionScreen = "/";
@@ -10,7 +12,11 @@ final GoRouter _router = GoRouter(
   routes: [
     GoRoute(
       path: transactionScreen,
-      builder: (context, state) => const TransactionScreen(),
+      builder: (context, state) => SharedConfigProvider(
+        buildChild: (user) => TransactionScreen(
+          user: user,
+        ),
+      ),
     ),
     GoRoute(
       path: importScreen,

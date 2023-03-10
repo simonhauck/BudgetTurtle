@@ -7,7 +7,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       Provider(
-        create: (_) => User("someUser"),
+        create: (_) => User("otherTest"),
       )
     ],
     child: const MyApp(),
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter Demo',
+      title: 'Budget Turtle',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
