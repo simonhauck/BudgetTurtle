@@ -49,12 +49,10 @@ class _InfiniteTransactionListState extends State<InfiniteTransactionList> {
 
       var items = data.transactions.toList();
       if (data.canRequestMore) {
-        print(data.canRequestMore);
         _pagingController.appendPage(items, data.transactions.last.id);
         return;
       }
 
-      print("can not append more");
       _pagingController.appendLastPage(items);
     } catch (e) {
       _pagingController.error = e;
