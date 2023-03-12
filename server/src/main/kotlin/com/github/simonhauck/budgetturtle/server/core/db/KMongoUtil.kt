@@ -13,5 +13,7 @@ fun <T> String.toObjectId(): Id<T> {
 fun <T> FindIterable<T>.sortByDescendingNestedProperties(
     vararg properties: KProperty<*>
 ): FindIterable<T> {
-    return this.sort(Sorts.descending(properties.map { it.name }))
+    val fieldNames = properties.joinToString(".") { it.name }
+
+    return this.sort(Sorts.descending(fieldNames))
 }
