@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service
 @Service
 class DataImportService(
     private val transactionRepository: TransactionRepository,
+    private val localDateParser: LocalDateParser,
 ) {
     private val log = KotlinLogging.logger {}
     fun importCsv(userId: String, content: String): Either<String, List<Transaction>> {
@@ -55,8 +56,10 @@ class DataImportService(
                 .toBigDecimal()
                 .divide(100.0.toBigDecimal())
 
+        val dateString = getOrDefault(ING_GER_DATE_KEY, "")
+
         return TransactionDetails(
-            getOrDefault(ING_GER_DATE_KEY, ""),
+            localDateParser.parseUnknownDateFormat(dateString),
             getOrDefault(ING_GER_CLIENT_NAME_KEY, ""),
             getOrDefault(ING_GER_CLIENT_BOOKING_TYPE_KEY, ""),
             getOrDefault(ING_GER_PURPOSE_KEY, ""),

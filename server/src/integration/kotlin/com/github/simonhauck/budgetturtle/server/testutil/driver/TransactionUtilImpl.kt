@@ -13,6 +13,8 @@ class TransactionUtilImpl(
     private val transactionRepository: TransactionRepository,
 ) : TransactionUtil {
 
+    override val testUserId: String = "IntegrationTestUser"
+
     override fun createTransactionForUser(userId: String): List<Transaction> {
         val startDate = LocalDate.of(2021, 1, 24)
         val initialTransaction = 1000.25.toBigDecimal()
@@ -27,7 +29,7 @@ class TransactionUtilImpl(
                         if (index.mod(2) == 0) transactionAmount.negate() else transactionAmount
 
                     TransactionDetails(
-                        startDate.plusDays(5.toLong() * index).toString(),
+                        startDate.plusDays(5.toLong() * index),
                         map.first,
                         map.second,
                         map.third,

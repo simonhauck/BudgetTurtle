@@ -11,7 +11,8 @@ class DefaultTestDriver(
     private val restTemplateUtil: RestTemplateUtil,
     private val resourceUtil: ResourceUtil,
     private val assertionUtil: AssertionUtil,
-    private val transactionUtil: TransactionUtil
+    private val transactionUtil: TransactionUtil,
+    private val databaseCleanupUtil: DatabaseCleanupUtil,
 ) :
     RestTemplateUtil by restTemplateUtil,
     ResourceUtil by resourceUtil,
@@ -25,5 +26,6 @@ class DefaultTestDriver(
 
     private fun testDriverSetup(testClazz: Any) {
         resourceUtil.init(testClazz.javaClass)
+        databaseCleanupUtil.removeAllDataForUser(transactionUtil.testUserId)
     }
 }

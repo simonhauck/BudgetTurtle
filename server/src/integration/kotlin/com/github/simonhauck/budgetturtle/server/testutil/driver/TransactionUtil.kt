@@ -4,5 +4,7 @@ import com.github.simonhauck.budgetturtle.server.transaction.domain.model.Transa
 
 interface TransactionUtil {
 
+    val testUserId: String
+
     fun createTransactionForUser(userId: String): List<Transaction>
 }

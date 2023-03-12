@@ -1,8 +1,8 @@
 {
   "transactions": [
     {
-      "id": "6401243978e50b662ec9025a",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aaa",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-07-03",
         "clientName": "Best company",
@@ -12,8 +12,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90259",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa9",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-06-28",
         "clientName": "Saving Company",
@@ -23,8 +23,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90258",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa8",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-06-23",
         "clientName": "The uncreative company",
@@ -34,8 +34,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90257",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa7",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-06-18",
         "clientName": "Some random Person",
@@ -45,8 +45,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90256",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa6",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-06-13",
         "clientName": "Roommate",
@@ -56,8 +56,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90255",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa5",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-06-08",
         "clientName": "ING",
@@ -67,8 +67,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90254",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa4",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-06-03",
         "clientName": "Grandma",
@@ -78,8 +78,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90253",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa3",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-05-29",
         "clientName": "Some other food company",
@@ -89,8 +89,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90252",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa2",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-05-24",
         "clientName": "Some food company",
@@ -100,8 +100,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90251",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa1",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-05-19",
         "clientName": "Other Comany",
@@ -111,8 +111,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90250",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47aa0",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-05-14",
         "clientName": "VISA Some Company GMBH",
@@ -122,8 +122,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec9024f",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a9f",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-05-09",
         "clientName": "Best company",
@@ -133,8 +133,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec9024e",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a9e",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-05-04",
         "clientName": "Saving Company",
@@ -144,8 +144,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec9024d",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a9d",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-04-29",
         "clientName": "The uncreative company",
@@ -155,8 +155,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec9024c",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a9c",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-04-24",
         "clientName": "Some random Person",
@@ -166,8 +166,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec9024b",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a9b",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-04-19",
         "clientName": "Roommate",
@@ -177,8 +177,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec9024a",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a9a",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-04-14",
         "clientName": "ING",
@@ -188,8 +188,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90249",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a99",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-04-09",
         "clientName": "Grandma",
@@ -199,8 +199,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90248",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a98",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-04-04",
         "clientName": "Some other food company",
@@ -210,8 +210,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90247",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a97",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-03-30",
         "clientName": "Some food company",
@@ -221,8 +221,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90246",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a96",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-03-25",
         "clientName": "Other Comany",
@@ -232,8 +232,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90245",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a95",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-03-20",
         "clientName": "VISA Some Company GMBH",
@@ -243,8 +243,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90244",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a94",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-03-15",
         "clientName": "Best company",
@@ -254,8 +254,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90243",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a93",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-03-10",
         "clientName": "Saving Company",
@@ -265,8 +265,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90242",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a92",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-03-05",
         "clientName": "The uncreative company",
@@ -276,8 +276,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90241",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a91",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-02-28",
         "clientName": "Some random Person",
@@ -287,8 +287,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec90240",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a90",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-02-23",
         "clientName": "Roommate",
@@ -298,8 +298,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec9023f",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a8f",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-02-18",
         "clientName": "ING",
@@ -309,8 +309,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec9023e",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a8e",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-02-13",
         "clientName": "Grandma",
@@ -320,8 +320,8 @@
       }
     },
     {
-      "id": "6401243978e50b662ec9023d",
-      "userId": "SomeFakeUser",
+      "id": "640e445af11cab2dfad47a8d",
+      "userId": "IntegrationTestUser",
       "details": {
         "date": "2021-02-08",
         "clientName": "Some other food company",

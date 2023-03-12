@@ -26,7 +26,7 @@ data class TransactionDetailsDto(
 
         fun fromModel(model: TransactionDetails): TransactionDetailsDto {
             return TransactionDetailsDto(
-                date = model.date,
+                date = model.date.toString(),
                 clientName = model.clientName,
                 bookingType = model.bookingType,
                 purpose = model.purpose,

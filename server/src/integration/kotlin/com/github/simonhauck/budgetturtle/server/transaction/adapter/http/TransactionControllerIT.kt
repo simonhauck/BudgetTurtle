@@ -17,9 +17,9 @@ class TransactionControllerIT : IntegrationTest() {
     @Test
     fun `get all returns an the list of stored transactions for the existing user`() =
         testDriver(this) {
-            createTransactionForUser(someExistingUser)
+            createTransactionForUser(testUserId)
 
-            val actual = get("/api/transactions/user/$someExistingUser/last")
+            val actual = get("/api/transactions/user/$testUserId/last")
 
             actual.body.assertJsonEquals(
                 readAndNormalize("getTransaction_details_expected.json"),
