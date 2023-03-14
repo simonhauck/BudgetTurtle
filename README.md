@@ -6,7 +6,7 @@ Goal of this project is to provide a self hosted application to track your budge
 
 ## Major Feature List
 
-- [ ] Import transaction reports from your bank manually
+- [x] Import transaction reports from your bank manually
 - [ ] Import transaction directly from your bank automatically
 - [ ] Custom labels for your transactions
 - [ ] Graphs & Reports about your transactions
