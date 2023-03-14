@@ -1,0 +1,335 @@
+{
+  "transactions": [
+    {
+      "id": "640e5434109917751b3765b9",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-07-03",
+        "clientName": "Best company",
+        "bookingType": "Gehalt/Rente",
+        "purpose": "Lohn",
+        "transactionAmount": -1480.25
+      }
+    },
+    {
+      "id": "640e5434109917751b376598",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-07-03",
+        "clientName": "Best company",
+        "bookingType": "Gehalt/Rente",
+        "purpose": "Lohn",
+        "transactionAmount": -1480.25
+      }
+    },
+    {
+      "id": "640e5434109917751b376597",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-28",
+        "clientName": "Saving Company",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Shut up and take my money",
+        "transactionAmount": 1465.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765b8",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-28",
+        "clientName": "Saving Company",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Shut up and take my money",
+        "transactionAmount": 1465.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765b7",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-23",
+        "clientName": "The uncreative company",
+        "bookingType": "Lastschrift",
+        "purpose": "Some text",
+        "transactionAmount": -1450.25
+      }
+    },
+    {
+      "id": "640e5434109917751b376596",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-23",
+        "clientName": "The uncreative company",
+        "bookingType": "Lastschrift",
+        "purpose": "Some text",
+        "transactionAmount": -1450.25
+      }
+    },
+    {
+      "id": "640e5434109917751b376595",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-18",
+        "clientName": "Some random Person",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Rent",
+        "transactionAmount": 1435.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765b6",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-18",
+        "clientName": "Some random Person",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Rent",
+        "transactionAmount": 1435.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765b5",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-13",
+        "clientName": "Roommate",
+        "bookingType": "Gutschrift aus Dauerauftrag",
+        "purpose": "Anteil Miete",
+        "transactionAmount": -1420.25
+      }
+    },
+    {
+      "id": "640e5434109917751b376594",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-13",
+        "clientName": "Roommate",
+        "bookingType": "Gutschrift aus Dauerauftrag",
+        "purpose": "Anteil Miete",
+        "transactionAmount": -1420.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765b4",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-08",
+        "clientName": "ING",
+        "bookingType": "Entgelt",
+        "purpose": "Money for giroCard",
+        "transactionAmount": 1405.25
+      }
+    },
+    {
+      "id": "640e5434109917751b376593",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-08",
+        "clientName": "ING",
+        "bookingType": "Entgelt",
+        "purpose": "Money for giroCard",
+        "transactionAmount": 1405.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765b3",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-03",
+        "clientName": "Grandma",
+        "bookingType": "Gutschrift",
+        "purpose": "Support grandchildren",
+        "transactionAmount": -1390.25
+      }
+    },
+    {
+      "id": "640e5434109917751b376592",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-06-03",
+        "clientName": "Grandma",
+        "bookingType": "Gutschrift",
+        "purpose": "Support grandchildren",
+        "transactionAmount": -1390.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765b2",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-29",
+        "clientName": "Some other food company",
+        "bookingType": "Lastschrift",
+        "purpose": "Google Pay",
+        "transactionAmount": 1375.25
+      }
+    },
+    {
+      "id": "640e5434109917751b376591",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-29",
+        "clientName": "Some other food company",
+        "bookingType": "Lastschrift",
+        "purpose": "Google Pay",
+        "transactionAmount": 1375.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765b1",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-24",
+        "clientName": "Some food company",
+        "bookingType": "Lastschrift",
+        "purpose": "Payed for the best food",
+        "transactionAmount": -1360.25
+      }
+    },
+    {
+      "id": "640e5434109917751b376590",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-24",
+        "clientName": "Some food company",
+        "bookingType": "Lastschrift",
+        "purpose": "Payed for the best food",
+        "transactionAmount": -1360.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765b0",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-19",
+        "clientName": "Other Comany",
+        "bookingType": "Überweisung",
+        "purpose": "Some custom usage",
+        "transactionAmount": 1345.25
+      }
+    },
+    {
+      "id": "640e5434109917751b37658f",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-19",
+        "clientName": "Other Comany",
+        "bookingType": "Überweisung",
+        "purpose": "Some custom usage",
+        "transactionAmount": 1345.25
+      }
+    },
+    {
+      "id": "640e5434109917751b37658e",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-14",
+        "clientName": "VISA Some Company GMBH",
+        "bookingType": "Lastschrift",
+        "purpose": "Payed for the best food",
+        "transactionAmount": -1330.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765af",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-14",
+        "clientName": "VISA Some Company GMBH",
+        "bookingType": "Lastschrift",
+        "purpose": "Payed for the best food",
+        "transactionAmount": -1330.25
+      }
+    },
+    {
+      "id": "640e5434109917751b37658d",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-09",
+        "clientName": "Best company",
+        "bookingType": "Gehalt/Rente",
+        "purpose": "Lohn",
+        "transactionAmount": 1315.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765ae",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-09",
+        "clientName": "Best company",
+        "bookingType": "Gehalt/Rente",
+        "purpose": "Lohn",
+        "transactionAmount": 1315.25
+      }
+    },
+    {
+      "id": "640e5434109917751b37658c",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-04",
+        "clientName": "Saving Company",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Shut up and take my money",
+        "transactionAmount": -1300.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765ad",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-05-04",
+        "clientName": "Saving Company",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Shut up and take my money",
+        "transactionAmount": -1300.25
+      }
+    },
+    {
+      "id": "640e5434109917751b37658b",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-04-29",
+        "clientName": "The uncreative company",
+        "bookingType": "Lastschrift",
+        "purpose": "Some text",
+        "transactionAmount": 1285.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765ac",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-04-29",
+        "clientName": "The uncreative company",
+        "bookingType": "Lastschrift",
+        "purpose": "Some text",
+        "transactionAmount": 1285.25
+      }
+    },
+    {
+      "id": "640e5434109917751b37658a",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-04-24",
+        "clientName": "Some random Person",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Rent",
+        "transactionAmount": -1270.25
+      }
+    },
+    {
+      "id": "640e5434109917751b3765ab",
+      "userId": "IntegrationTestUser",
+      "details": {
+        "date": "2021-04-24",
+        "clientName": "Some random Person",
+        "bookingType": "Dauerauftrag / Terminueberweisung",
+        "purpose": "Rent",
+        "transactionAmount": -1270.25
+      }
+    }
+  ],
+  "canRequestMore": true
+}

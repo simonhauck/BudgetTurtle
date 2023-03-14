@@ -4,10 +4,10 @@
   "errorMsg": "",
   "detectedTransactions": [
     {
-      "id": "63ffc5cf8320b459be9814e8",
+      "id": "640de685a21bd759f1621cd4",
       "userId": "someUser",
       "details": {
-        "date": "17.02.2023",
+        "date": "2023-02-17",
         "clientName": "VISA Some Company GMBH",
         "bookingType": "Lastschrift",
         "purpose": "Payed for the best food",
@@ -15,10 +15,10 @@
       }
     },
     {
-      "id": "63ffc5cf8320b459be9814e9",
+      "id": "640de685a21bd759f1621cd5",
       "userId": "someUser",
       "details": {
-        "date": "16.02.2023",
+        "date": "2023-02-16",
         "clientName": "Other Comany",
         "bookingType": "Überweisung",
         "purpose": "Some custom usage",
@@ -26,10 +26,10 @@
       }
     },
     {
-      "id": "63ffc5cf8320b459be9814ea",
+      "id": "640de685a21bd759f1621cd6",
       "userId": "someUser",
       "details": {
-        "date": "16.02.2023",
+        "date": "2023-02-16",
         "clientName": "Some food company",
         "bookingType": "Lastschrift",
         "purpose": "Google Pay",
@@ -37,10 +37,10 @@
       }
     },
     {
-      "id": "63ffc5cf8320b459be9814eb",
+      "id": "640de685a21bd759f1621cd7",
       "userId": "someUser",
       "details": {
-        "date": "15.02.2023",
+        "date": "2023-02-15",
         "clientName": "Grandma",
         "bookingType": "Gutschrift",
         "purpose": "Support grandchildren",
@@ -48,10 +48,10 @@
       }
     },
     {
-      "id": "63ffc5cf8320b459be9814ec",
+      "id": "640de685a21bd759f1621cd8",
       "userId": "someUser",
       "details": {
-        "date": "02.02.2023",
+        "date": "2023-02-02",
         "clientName": "ING",
         "bookingType": "Entgelt",
         "purpose": "Money for giroCard",
@@ -59,10 +59,10 @@
       }
     },
     {
-      "id": "63ffc5cf8320b459be9814ed",
+      "id": "640de685a21bd759f1621cd9",
       "userId": "someUser",
       "details": {
-        "date": "01.02.2023",
+        "date": "2023-02-01",
         "clientName": "Roommate",
         "bookingType": "Gutschrift aus Dauerauftrag",
         "purpose": "Anteil Miete",
@@ -70,10 +70,10 @@
       }
     },
     {
-      "id": "63ffc5cf8320b459be9814ee",
+      "id": "640de685a21bd759f1621cda",
       "userId": "someUser",
       "details": {
-        "date": "01.02.2023",
+        "date": "2023-02-01",
         "clientName": "Some random Person",
         "bookingType": "Dauerauftrag / Terminueberweisung",
         "purpose": "Rent",
@@ -81,10 +81,10 @@
       }
     },
     {
-      "id": "63ffc5cf8320b459be9814ef",
+      "id": "640de685a21bd759f1621cdb",
       "userId": "someUser",
       "details": {
-        "date": "31.01.2023",
+        "date": "2023-01-31",
         "clientName": "The uncreative company",
         "bookingType": "Lastschrift",
         "purpose": "Some text",
@@ -92,10 +92,10 @@
       }
     },
     {
-      "id": "63ffc5cf8320b459be9814f0",
+      "id": "640de685a21bd759f1621cdc",
       "userId": "someUser",
       "details": {
-        "date": "26.01.2023",
+        "date": "2023-01-26",
         "clientName": "Saving Company",
         "bookingType": "Dauerauftrag / Terminueberweisung",
         "purpose": "Shut up and take my money",
@@ -103,10 +103,10 @@
       }
     },
     {
-      "id": "63ffc5cf8320b459be9814f1",
+      "id": "640de685a21bd759f1621cdd",
       "userId": "someUser",
       "details": {
-        "date": "24.01.2023",
+        "date": "2023-01-24",
         "clientName": "Best company",
         "bookingType": "Gehalt/Rente",
         "purpose": "Lohn",

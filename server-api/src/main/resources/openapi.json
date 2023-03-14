@@ -51,6 +51,44 @@
         }
       }
     },
+    "/api/transactions/user/{userId}/last": {
+      "get": {
+        "tags": [
+          "transaction-controller"
+        ],
+        "operationId": "getTransactionPage",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "lastSeenID",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionPageDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/example/asfasf": {
       "get": {
         "tags": [
@@ -159,6 +197,24 @@
           },
           "details": {
             "$ref": "#/components/schemas/TransactionDetailsDto"
+          }
+        }
+      },
+      "TransactionPageDto": {
+        "required": [
+          "canRequestMore",
+          "transactions"
+        ],
+        "type": "object",
+        "properties": {
+          "transactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionDto"
+            }
+          },
+          "canRequestMore": {
+            "type": "boolean"
           }
         }
       },

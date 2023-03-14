@@ -3,7 +3,9 @@ package com.github.simonhauck.budgetturtle.server.transaction.adapter.http
 import arrow.core.getOrHandle
 import com.github.simonhauck.budgetturtle.server.transaction.domain.model.Transaction
 import com.github.simonhauck.budgetturtle.server.transaction.domain.service.DataImportService
+import java.nio.charset.Charset
 import java.util.Base64
+import org.mozilla.universalchardet.UniversalDetector
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -17,8 +19,12 @@ class TransactionImportController(
         @PathVariable userId: String,
         @RequestBody encodedFileDto: EncodedFileDto,
     ): ImportResultDto {
-        val content = decodeBase64(encodedFileDto.base64Content)
-        val transactionDetails = dataImportService.importCsv(userId = userId, content = content)
+        val decodeContent =
+            decodeBase64WithCharSetDetection(encodedFileDto.base64Content)
+                ?: return getImportFailedResult(encodedFileDto, "Failed to decode file")
+
+        val transactionDetails =
+            dataImportService.importCsv(userId = userId, content = decodeContent)
 
         return transactionDetails
             .map { transactions -> getSuccessResult(encodedFileDto, transactions) }
@@ -46,8 +52,19 @@ class TransactionImportController(
 
     companion object {
 
-        fun decodeBase64(content: String): String =
-            Base64.getDecoder().decode(content).decodeToString()
+        fun decodeBase64WithCharSetDetection(content: String): String? {
+            val decodedBytes = Base64.getDecoder().decode(content)
+
+            val charSetDetector =
+                UniversalDetector().apply {
+                    handleData(decodedBytes)
+                    dataEnd()
+                }
+
+            val detectedCharset = charSetDetector.detectedCharset ?: return null
+
+            return String(decodedBytes, Charset.forName(detectedCharset))
+        }
     }
 }
 

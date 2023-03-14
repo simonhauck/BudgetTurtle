@@ -1,5 +1,4 @@
 import 'package:budget_turtle/router.dart';
-import 'package:budget_turtle/upload_account_export_button.dart';
 import 'package:budget_turtle/user/user.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -8,7 +7,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       Provider(
-        create: (_) => User("someUser"),
+        create: (_) => User("otherTest"),
       )
     ],
     child: const MyApp(),
@@ -21,48 +20,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter Demo',
+      title: 'Budget Turtle',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       routerConfig: getRouter(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  final int _counter = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: const UploadAccountExportButton(),
     );
   }
 }
